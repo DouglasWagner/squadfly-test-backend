@@ -1,0 +1,22 @@
+meta {
+  name: Conhecimento insuficiente
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/agent/query
+  body: json
+  auth: none
+}
+
+headers {
+  X-Organization-Key: {{alphaApiKey}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "question": "Existe uma política interna sobre dress code?"
+  }
+}

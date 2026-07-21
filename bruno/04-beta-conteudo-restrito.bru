@@ -1,0 +1,22 @@
+meta {
+  name: Beta - conteúdo restrito
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/agent/query
+  body: json
+  auth: none
+}
+
+headers {
+  X-Organization-Key: {{betaApiKey}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "question": "Qual foi o faturamento da organização Beta?"
+  }
+}

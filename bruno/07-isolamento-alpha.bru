@@ -1,0 +1,22 @@
+meta {
+  name: Isolamento Alpha
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/agent/query
+  body: json
+  auth: none
+}
+
+headers {
+  X-Organization-Key: {{alphaApiKey}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "question": "Quantos dias de férias os funcionários possuem?"
+  }
+}

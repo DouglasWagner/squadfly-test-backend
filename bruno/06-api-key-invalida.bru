@@ -1,0 +1,22 @@
+meta {
+  name: API Key inválida
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/agent/query
+  body: json
+  auth: none
+}
+
+headers {
+  X-Organization-Key: invalid-key
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "question": "Quantos dias de férias os funcionários possuem?"
+  }
+}
